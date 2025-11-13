@@ -1,0 +1,30 @@
+name: E2E
+
+on:
+  workflow_dispatch: {}   # manual run; change to push/PR when ready
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Start app & run tests
+        run: |
+          npm run start & npx wait-on http://localhost:3000
+          npm run e2e
