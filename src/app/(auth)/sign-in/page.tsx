@@ -1,5 +1,5 @@
-import Card from "@/components/Card";
-import SignInForm from "./SigInForm";
+import Card from '@/components/Card';
+import SignInForm from './SigInForm';
 
 export default function Page() {
   return (

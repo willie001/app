@@ -1,7 +1,7 @@
 name: E2E
 
 on:
-  workflow_dispatch: {}   # manual run; change to push/PR when ready
+  workflow_dispatch: {} # manual run; change to push/PR when ready
 
 jobs:
   e2e:

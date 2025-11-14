@@ -1,5 +1,5 @@
-import Card from "@/components/Card";
-import SignOutButton from "./SignOutButton";
+import Card from '@/components/Card';
+import SignOutButton from './SignOutButton';
 
 export default function Page() {
   return (
